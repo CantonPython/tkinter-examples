@@ -47,14 +47,12 @@ class CallbackExamples:
         self.b2.grid(row=1, column=0)
 
         # Lambda
-        name = 'Name 1'
-        self.b3 = tk.Button(self.frame, text=name, command=lambda : print(name))
+        self.b3 = tk.Button(self.frame, text='Pass Name', command=lambda : print('Pass Name'))
         self.b3.grid(row=2, column=0)
 
         # Command object
-        name = 'Command object'
-        command = Counter(name)
-        self.b4 = tk.Button(self.frame, text=name, command=command)
+        command = Counter('Command object')
+        self.b4 = tk.Button(self.frame, text=command.name, command=command)
         self.b4.grid(row=3, column=0)
 
 
@@ -69,7 +67,6 @@ def main():
     root.title('Hello World')
     CallbackExamples(root)
     root.mainloop()
-    root.destroy()
 
 if __name__ == '__main__':
     main()

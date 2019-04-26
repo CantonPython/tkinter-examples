@@ -15,7 +15,7 @@ class MyApplication:
         filemenu.add_command(label="Open", command=hello)
         filemenu.add_command(label="Save", command=hello)
         filemenu.add_separator()
-        filemenu.add_command(label="Exit", command=parent.quit)
+        filemenu.add_command(label="Exit", command=parent.destroy)
         menubar.add_cascade(label="File", menu=filemenu)
 
         # create more pulldown menus
@@ -37,7 +37,6 @@ def main():
     root.title('Menubar Example')
     MyApplication(root)
     root.mainloop()
-    root.destroy()
 
 if __name__ == '__main__':
     main()
