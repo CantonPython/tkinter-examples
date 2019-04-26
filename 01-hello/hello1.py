@@ -1,6 +1,6 @@
-import tkinter
+import tkinter as tk
 
-root = tkinter.Tk()
-window = tkinter.Label(root, text='Hello World')
-window.pack()
+root = tk.Tk()
+label = tk.Label(root, text='Hello World')
+label.grid(row=0, column=0)
 root.mainloop()
